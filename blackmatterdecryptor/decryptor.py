@@ -17,7 +17,13 @@ class BlackMatterDecryptor():
        - The first 8 bytes of the pdata section are used as the key.
        - The bytes following that are used as the config data.
        - Simply call `decrypt_config()` then `extract_all()` after creating an instance.
-
+        Example usage:
+            from blackmatterdecryptor import BlackMatterDecryptor
+            fpath = fpath
+            bm = BlackMatterDecryptor(fpath)
+            bm.decrypt_config()
+            bm.extract_all()
+       
     2. Manual key & config supply:
        - Pass `key` and `config_va` in the constructor if the config is stored differently.
        - Then call `decrypt_config()`.
